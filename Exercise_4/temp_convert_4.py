@@ -1,15 +1,16 @@
 #####################################################################
-# Jan Berglund - sports_results_3.py
+# Jan Berglund - temp_convert_4.py
 #
 # Veckouppgift 2
 # Vecka 3, 13/1
-# 3 Sportresultat
+# 4 Temperaturomvandling
 #####################################################################
 
 
-# Ask for and save an integer or float in a variable
+# Ask for and save an integer (or float) in a variable
 # Throw ValueError if incorrect input (not an integer/float),
 # then try again
+# Accept and keep negative numbers as is
 def userint_input(info_text):
     while True:
         user_in = input(info_text)
@@ -27,7 +28,7 @@ def userint_input(info_text):
 
 
 print("\nYou will be asked to select which scale to enter your "
-      "temperature in, C for Celsius or F for Fahrenheit.")
+      "temperature in, Celsius or Fahrenheit.")
 input("\nPress enter to continue")
 
 # Wait for appropriate response from the user
@@ -42,7 +43,6 @@ while True:
         continue
 
 print("\nYou selected " + user_scale)
-input("\nPress enter to continue")
 
 print("\nYou will be asked to select enter your temperature "
       "in " + user_scale + ".")
@@ -62,13 +62,16 @@ else:
     temp_f = user_temp
     temp_c = ((user_temp - 32) / 1.8)
 
+temp_f = round(temp_f, 2)
+temp_c = round(temp_c, 2)
+
 print("\nTemp in C is " + str(temp_c))
 print("Temp in F is " + str(temp_f))
 
 input("\nPress enter to continue")
 
 
-# Check to see if advicing regarding clothes or not
+# Check to see if advising regarding clothes or not
 advice = (temp_c < 10 or temp_c >= 20)
 
 if not advice:
