@@ -1,0 +1,7 @@
+# Used for "Veckouppgift 2"
+
+# Ignore auto-generated xml files (no other xml files planned)
+*.xml
+
+/.idea
+/.idea/*
