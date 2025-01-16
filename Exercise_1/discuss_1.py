@@ -44,7 +44,7 @@ input("Press Enter to continue!\n")
 while True:
     try:
         member_check = int(input("If you are a member, please type 1, "
-                                 "else any other integer: "))
+                                 "else any other integer (then hit enter): "))
         member_check = abs(member_check)
         break
     except ValueError:
